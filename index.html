@@ -17,11 +17,10 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
-background:#f5f8fb;
+background:#f4f7fb;
 overflow-x:hidden;
 }
 
@@ -35,7 +34,7 @@ linear-gradient(
 rgba(0,0,0,.55),
 rgba(0,0,0,.55)
 ),
-url("img/estadio.jpg");
+url("IMG/estadio.jpg.png");
 
 background-size:cover;
 background-position:center;
@@ -44,28 +43,33 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+
 color:white;
 position:relative;
 }
 
 .hero h1{
 font-size:4rem;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.4rem;
+font-size:1.5rem;
 margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 35px;
+padding:15px 30px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
 margin:10px;
 transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .btn-whatsapp{
@@ -76,10 +80,6 @@ color:white;
 .btn-facebook{
 background:#1877F2;
 color:white;
-}
-
-.btn:hover{
-transform:scale(1.05);
 }
 
 /* PELOTA */
@@ -110,8 +110,8 @@ transform:rotate(720deg);
 .banner{
 background:#002E6D;
 color:white;
+padding:25px;
 text-align:center;
-padding:20px;
 }
 
 .banner h2{
@@ -131,17 +131,14 @@ color:#002E6D;
 margin-bottom:40px;
 }
 
-/* IMAGENES */
-
 .imagen{
 display:flex;
 justify-content:center;
-margin-top:20px;
 }
 
 .imagen img{
 width:90%;
-max-width:1000px;
+max-width:1100px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
@@ -152,33 +149,22 @@ box-shadow:0 10px 30px rgba(0,0,0,.2);
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:25px;
+gap:20px;
 }
 
 .card{
-
 background:white;
-width:260px;
-padding:30px;
+width:250px;
+padding:25px;
 border-radius:20px;
-
+text-align:center;
 transition:.4s;
-
-box-shadow:
-0 5px 15px rgba(0,0,0,.1);
-
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .card:hover{
-
-transform:
-translateY(-10px)
-scale(1.05);
-
-box-shadow:
-0 15px 35px
-rgba(0,169,224,.4);
-
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,169,224,.4);
 }
 
 .card i{
@@ -190,6 +176,7 @@ margin-bottom:15px;
 /* CONTADOR */
 
 .contador{
+
 background:
 linear-gradient(
 135deg,
@@ -222,15 +209,12 @@ gap:15px;
 
 input,
 textarea{
-
 padding:15px;
-border:1px solid #ddd;
 border-radius:10px;
-
+border:1px solid #ccc;
 }
 
 button{
-
 background:#00A9E0;
 color:white;
 border:none;
@@ -238,53 +222,47 @@ padding:15px;
 font-size:18px;
 border-radius:10px;
 cursor:pointer;
-
 }
 
 /* FOOTER */
 
 footer{
-
 background:#002E6D;
 color:white;
 text-align:center;
 padding:25px;
-
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOTANTE */
 
 .whatsapp{
-
 position:fixed;
 right:20px;
 bottom:20px;
-
 width:65px;
 height:65px;
-
 background:#25D366;
 color:white;
-
 border-radius:50%;
-
 display:flex;
 justify-content:center;
 align-items:center;
-
 font-size:35px;
 text-decoration:none;
-
 box-shadow:0 5px 20px rgba(0,0,0,.3);
-
 z-index:999;
-
 }
+
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
 .hero h1{
 font-size:2.2rem;
+}
+
+.hero p{
+font-size:1.1rem;
 }
 
 .numero{
@@ -302,10 +280,10 @@ font-size:3rem;
 
 <div class="hero">
 
-<h1>⚽ Conectate a la Velocidad del Mundial 2026 ⚽</h1>
+<h1>⚽ PROMO MUNDIAL 2026 ⚽</h1>
 
 <p>
-Fibra Óptica Movistar y Portabilidad
+Conectate a la velocidad de Movistar Fibra
 </p>
 
 <a
@@ -334,13 +312,7 @@ Facebook
 
 <section class="banner">
 
-<h2>
-🔥 PROMO MUNDIAL 2026 🔥
-</h2>
-
-<p>
-Instalación GRATIS + Bonificaciones Exclusivas
-</p>
+<h2>🔥 Instalación GRATIS + Bonificaciones Exclusivas 🔥</h2>
 
 </section>
 
@@ -353,7 +325,7 @@ Instalación GRATIS + Bonificaciones Exclusivas
 <div class="imagen">
 
 <img
-src="img/velocidades.jpg"
+src="IMG/velocidades.jpg.png"
 alt="Velocidades">
 
 </div>
@@ -369,7 +341,7 @@ alt="Velocidades">
 <div class="imagen">
 
 <img
-src="img/cambio-compania.jpg"
+src="IMG/cambio-compañia.jpg.png"
 alt="Portabilidad">
 
 </div>
@@ -385,51 +357,27 @@ alt="Portabilidad">
 <div class="cards">
 
 <div class="card">
-
 <i class="fas fa-wifi"></i>
-
-<h3>Fibra Óptica</h3>
-
-<p>
-Hasta 1 Giga de velocidad.
-</p>
-
+<h3>300 a 1 Giga</h3>
+<p>Máxima velocidad para tu hogar.</p>
 </div>
 
 <div class="card">
-
 <i class="fas fa-gift"></i>
-
 <h3>Promociones</h3>
-
-<p>
-Bonificaciones exclusivas.
-</p>
-
+<p>Bonificaciones exclusivas.</p>
 </div>
 
 <div class="card">
-
 <i class="fas fa-headset"></i>
-
-<h3>Atención</h3>
-
-<p>
-Asesoramiento personalizado.
-</p>
-
+<h3>Atención Personalizada</h3>
+<p>Asesoramiento rápido y profesional.</p>
 </div>
 
 <div class="card">
-
 <i class="fas fa-bolt"></i>
-
 <h3>Instalación Gratis</h3>
-
-<p>
-Sin costo de instalación.
-</p>
-
+<p>Sin costo de instalación.</p>
 </div>
 
 </div>
@@ -438,9 +386,7 @@ Sin costo de instalación.
 
 <section class="contador">
 
-<h2>
-Clientes Conectados
-</h2>
+<h2>Clientes Conectados</h2>
 
 <div class="numero" id="contador">
 0
@@ -470,7 +416,6 @@ required>
 
 <textarea
 id="consulta"
-rows="5"
 placeholder="Tu consulta">
 </textarea>
 
@@ -484,7 +429,7 @@ Enviar Consulta
 
 <footer>
 
-<h3>Agustina Chacón</h3>
+<h3>Agustina </h3>
 
 <p>
 Asesora Comercial Movistar Fibra y Portabilidad
@@ -502,8 +447,6 @@ class="whatsapp">
 </a>
 
 <script>
-
-/* CONTADOR */
 
 let numero = 0;
 
@@ -524,26 +467,24 @@ clearInterval(intervalo);
 
 },20);
 
-/* FORMULARIO */
-
 document
 .getElementById("consultaForm")
 .addEventListener("submit",function(e){
 
 e.preventDefault();
 
-let nombre =
+const nombre =
 document.getElementById("nombre").value;
 
-let telefono =
+const telefono =
 document.getElementById("telefono").value;
 
-let consulta =
+const consulta =
 document.getElementById("consulta").value;
 
-let mensaje =
-`Hola, mi nombre es ${nombre}%0A` +
-`Teléfono: ${telefono}%0A` +
+const mensaje =
+`Hola, soy ${nombre}%0A`+
+`Teléfono: ${telefono}%0A`+
 `Consulta: ${consulta}`;
 
 window.open(

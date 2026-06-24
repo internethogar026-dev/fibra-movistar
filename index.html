@@ -1,106 +1,559 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fibra Óptica Movistar | Agustina Chacón</title>
 
-<link rel="stylesheet" href="estilos.css">
+<title>Movistar Fibra | Agustina Chacón</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fb;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("img/estadio.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.4rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+transition:.3s;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+}
+
+.btn-facebook{
+background:#1877F2;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* PELOTA */
+
+.pelota{
+position:absolute;
+bottom:50px;
+font-size:70px;
+animation:mover 10s linear infinite;
+}
+
+@keyframes mover{
+
+0%{
+left:-100px;
+transform:rotate(0deg);
+}
+
+100%{
+left:100%;
+transform:rotate(720deg);
+}
+
+}
+
+/* BANNER */
+
+.banner{
+background:#002E6D;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.banner h2{
+font-size:2rem;
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 20px;
+}
+
+.titulo{
+text-align:center;
+font-size:2.5rem;
+color:#002E6D;
+margin-bottom:40px;
+}
+
+/* IMAGENES */
+
+.imagen{
+display:flex;
+justify-content:center;
+margin-top:20px;
+}
+
+.imagen img{
+width:90%;
+max-width:1000px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* BENEFICIOS */
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+
+background:white;
+width:260px;
+padding:30px;
+border-radius:20px;
+
+transition:.4s;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.card:hover{
+
+transform:
+translateY(-10px)
+scale(1.05);
+
+box-shadow:
+0 15px 35px
+rgba(0,169,224,.4);
+
+}
+
+.card i{
+font-size:40px;
+color:#00A9E0;
+margin-bottom:15px;
+}
+
+/* CONTADOR */
+
+.contador{
+background:
+linear-gradient(
+135deg,
+#00A9E0,
+#00D775
+);
+
+color:white;
+text-align:center;
+}
+
+.numero{
+font-size:5rem;
+font-weight:bold;
+}
+
+/* FORMULARIO */
+
+.formulario{
+background:white;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+textarea{
+
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+
+}
+
+button{
+
+background:#00A9E0;
+color:white;
+border:none;
+padding:15px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#002E6D;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+right:20px;
+bottom:20px;
+
+width:65px;
+height:65px;
+
+background:#25D366;
+color:white;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:35px;
+text-decoration:none;
+
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.numero{
+font-size:3rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <div class="hero">
-        <h1>⚽ Conectate a la velocidad del Mundial ⚽</h1>
-        <p>Fibra Óptica Movistar y Portabilidad</p>
 
-        <a class="btn"
-        href="https://wa.me/5491173747867"
-        target="_blank">
-        Contactar por WhatsApp
-        </a>
-    </div>
+<div class="hero">
+
+<h1>⚽ Conectate a la Velocidad del Mundial 2026 ⚽</h1>
+
+<p>
+Fibra Óptica Movistar y Portabilidad
+</p>
+
+<a
+href="https://wa.me/5491173747867"
+target="_blank"
+class="btn btn-whatsapp">
+
+WhatsApp
+
+</a>
+
+<a
+href="https://www.facebook.com/profile.php?id=61587689318175"
+target="_blank"
+class="btn btn-facebook">
+
+Facebook
+
+</a>
+
+</div>
+
+<div class="pelota">⚽</div>
+
 </header>
 
-<section class="planes">
+<section class="banner">
 
-    <h2>🌐 Velocidades Disponibles</h2>
+<h2>
+🔥 PROMO MUNDIAL 2026 🔥
+</h2>
 
-    <img src="img/velocidades.JPG"
-    alt="Planes de Fibra">
-
-</section>
-
-<section class="portabilidad">
-
-    <h2>📱 Cambiate a Movistar</h2>
-
-    <img src="img/cambio de compañia.JPG"
-    alt="Portabilidad">
+<p>
+Instalación GRATIS + Bonificaciones Exclusivas
+</p>
 
 </section>
 
-<section class="beneficios">
+<section>
 
-    <h2>¿Por qué elegirnos?</h2>
+<h2 class="titulo">
+🌐 Velocidades Disponibles
+</h2>
 
-    <div class="cards">
+<div class="imagen">
 
-        <div class="card">
-            ⚡ Instalación Gratis
-        </div>
+<img
+src="img/velocidades.jpg"
+alt="Velocidades">
 
-        <div class="card">
-            🎁 Promociones Exclusivas
-        </div>
-
-        <div class="card">
-            🚀 Hasta 1 Giga de Velocidad
-        </div>
-
-        <div class="card">
-            📞 Atención Personalizada
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<section class="contacto">
+<section>
 
-<h2>Contacto</h2>
+<h2 class="titulo">
+📱 Cambiate a Movistar
+</h2>
 
-<a class="btn whatsapp"
-href="https://wa.me/5491173747867"
-target="_blank">
-<i class="fab fa-whatsapp"></i>
-WhatsApp
-</a>
+<div class="imagen">
 
-<a class="btn facebook"
-href="https://www.facebook.com/profile.php?id=61587689318175"
-target="_blank">
-<i class="fab fa-facebook"></i>
-Facebook
-</a>
+<img
+src="img/cambio-compania.jpg"
+alt="Portabilidad">
+
+</div>
 
 </section>
 
-<a class="whatsapp-float"
-href="https://wa.me/5491173747867"
-target="_blank">
+<section>
 
-<i class="fab fa-whatsapp"></i>
+<h2 class="titulo">
+¿Por qué elegirnos?
+</h2>
 
-</a>
+<div class="cards">
+
+<div class="card">
+
+<i class="fas fa-wifi"></i>
+
+<h3>Fibra Óptica</h3>
+
+<p>
+Hasta 1 Giga de velocidad.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-gift"></i>
+
+<h3>Promociones</h3>
+
+<p>
+Bonificaciones exclusivas.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-headset"></i>
+
+<h3>Atención</h3>
+
+<p>
+Asesoramiento personalizado.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-bolt"></i>
+
+<h3>Instalación Gratis</h3>
+
+<p>
+Sin costo de instalación.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contador">
+
+<h2>
+Clientes Conectados
+</h2>
+
+<div class="numero" id="contador">
+0
+</div>
+
+</section>
+
+<section class="formulario">
+
+<h2 class="titulo">
+Solicitá Información
+</h2>
+
+<form id="consultaForm">
+
+<input
+type="text"
+id="nombre"
+placeholder="Nombre Completo"
+required>
+
+<input
+type="tel"
+id="telefono"
+placeholder="Teléfono"
+required>
+
+<textarea
+id="consulta"
+rows="5"
+placeholder="Tu consulta">
+</textarea>
+
+<button type="submit">
+Enviar Consulta
+</button>
+
+</form>
+
+</section>
 
 <footer>
-<p>Agustina  | Asesora Comercial</p>
+
+<h3>Agustina Chacón</h3>
+
+<p>
+Asesora Comercial Movistar Fibra y Portabilidad
+</p>
+
 </footer>
+
+<a
+href="https://wa.me/5491173747867"
+target="_blank"
+class="whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+/* CONTADOR */
+
+let numero = 0;
+
+const contador =
+document.getElementById("contador");
+
+const intervalo = setInterval(() => {
+
+numero += 5;
+
+contador.innerText = numero;
+
+if(numero >= 500){
+
+clearInterval(intervalo);
+
+}
+
+},20);
+
+/* FORMULARIO */
+
+document
+.getElementById("consultaForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let nombre =
+document.getElementById("nombre").value;
+
+let telefono =
+document.getElementById("telefono").value;
+
+let consulta =
+document.getElementById("consulta").value;
+
+let mensaje =
+`Hola, mi nombre es ${nombre}%0A` +
+`Teléfono: ${telefono}%0A` +
+`Consulta: ${consulta}`;
+
+window.open(
+`https://wa.me/5491173747867?text=${mensaje}`,
+"_blank"
+);
+
+});
+
+</script>
 
 </body>
 </html>
